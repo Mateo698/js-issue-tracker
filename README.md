@@ -1,1 +1,1 @@
-Issue-Tracker
+js-issue-tracker
