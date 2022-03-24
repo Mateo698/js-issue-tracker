@@ -1,5 +1,6 @@
 
 
+
 function fetchIssues() {
   document.getElementById('issueInputForm').addEventListener('submit', saveIssue);
   var issues = JSON.parse(localStorage.getItem('issues'));
@@ -27,8 +28,8 @@ function fetchIssues() {
   }
 }
 
+
 function saveIssue(e) {
- 
     var issueId = chance.guid();
     var issueDesc = document.getElementById('issueDescInput').value;
     var issueSeverity = document.getElementById('issueSeverityInput').value;
@@ -53,10 +54,11 @@ function saveIssue(e) {
     }
     
     document.getElementById('issueInputForm').reset();
-
+    document.getElementById('issueInputForm').addEventListener('submit', saveIssue);
     fetchIssues();
     
     e.preventDefault(); 
+
     
   }
 
@@ -73,3 +75,6 @@ function saveIssue(e) {
     
     fetchIssues();
   } 
+
+
+
